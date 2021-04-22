@@ -1,3 +1,3 @@
 # indie.science
 
-https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg
+![](https://github.com/indiescience/indiescience/actions/workflows/build.yml/badge.svg)
