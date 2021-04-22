@@ -1,1 +1,1 @@
-# Indie Science
+# indie.science
