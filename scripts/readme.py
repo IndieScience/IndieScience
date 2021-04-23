@@ -1,12 +1,11 @@
 from jinja2 import Environment, FileSystemLoader
 import pathlib
-root = pathlib.Path(__file__).parent.parent.resolve()
+current = pathlib.Path(__file__).parent.resolve()
+root = current.parent.resolve()
 
-print(root)
 if __name__ == "__main__":
-    env = Environment(loader=FileSystemLoader('templates'))    
+    env = Environment(loader=FileSystemLoader(current / "templates"))    
     template = env.get_template('README.md')
-    text = template.render()
 
     readme = root / "README.md"
-    readme.open("w").write(text)
+    readme.open("w").write(template.render())
