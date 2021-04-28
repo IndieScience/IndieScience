@@ -1,0 +1,14 @@
+{
+    "title": "Eleventy Tailwind Starter Template",
+    "logo": "link",
+    "navbar": {
+        "About": "/about",
+        "Contact": "/contact",
+        "Mission": "/mission"
+    },
+    "colors": {
+        "primary": "#ffffff",
+        "secondary": "#ffffff",
+        "tertiary": "#ffffff"
+    }
+}

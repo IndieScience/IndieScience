@@ -1,0 +1,16 @@
+{
+    "scripts": {
+        "clean": "rimraf public src/css/styles.css",
+        "start": "npm run clean && postcss src/css/tailwind.css > src/css/styles.css && eleventy --watch --serve",
+        "build": "npm run clean && NODE_ENV=production postcss src/css/tailwind.css > src/css/styles.css && eleventy"
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^0.12.1",
+        "autoprefixer": "^10.2.5",
+        "cssnano": "^5.0.1",
+        "postcss": "^8.2.12",
+        "postcss-cli": "^8.3.1",
+        "rimraf": "^3.0.2",
+        "tailwindcss": "^2.1.2"
+    }
+}
