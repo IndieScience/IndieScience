@@ -1,0 +1,33 @@
+---
+layout: base
+pagination:
+    data: tags
+    size: 1
+    alias: tag
+permalink: "tags/{{tag.name | slug}}/"
+---
+
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+            {% for post in posts %}
+                {% for postTag in post.tags %}
+                    {% if postTag == tag.name %}
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            <a href="/posts/{{post.title | slug}}" class="block relative h-48 rounded overflow-hidden">
+                                <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="{{post.thumbnail}}">
+                            </a>
+                            <div class="mt-4">
+                                <a href="/posts/{{post.title | slug}}">
+                                    <h2 class="text-gray-900 title-font text-xl font-medium">{{post.title}}</h2>
+                                </a>
+                                <h3 class="text-gray-400 text-sm mb-4 text-right">{{post.date}}</h3>
+                                <p class="mt-1 truncate">{{post.description}}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
