@@ -106,4 +106,4 @@ dist
 # Python cache
 __pycache__/
 
-public/
+.public/
